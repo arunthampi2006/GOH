@@ -1,5 +1,11 @@
 <script type="text/javascript" charset="utf-8">
-  $(function() {$('#countryTable').DataTable();});
+  $(function() {
+    $('#countryTable').DataTable();
+    $(document).on('click', '.edit', function(e){
+      // debugger
+      $('#createEditCountryMdl').modal();
+    })
+  });
 </script>
 <div class="container-fluid">
   <div class="col-lg-12">
@@ -27,7 +33,7 @@
           <td>America</td>
           <td>USA</td>
           <td>USD</td>
-          <td><button type="button" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
+          <td><button type="button" class="btn btn-info edit"><i class="fa fa-edit"></i></button></td>
           <td><button type="button" class="btn btn-dark"><i class="fa fa-trash"></i></button></td>
         </tr>
         <tr>
@@ -37,7 +43,7 @@
           <td>United Kingdom</td>
           <td>GBP</td>
           <td>USD</td>
-          <td><button type="button" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
+          <td><button type="button" class="btn btn-info edit"><i class="fa fa-edit"></i></button></td>
           <td><button type="button" class="btn btn-dark"><i class="fa fa-trash"></i></button></td>
         </tr>
         <tr>
@@ -47,7 +53,7 @@
           <td>America</td>
           <td>USA</td>
           <td>USD</td>
-          <td><button type="button" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
+          <td><button type="button" class="btn btn-info edit"><i class="fa fa-edit"></i></button></td>
           <td><button type="button" class="btn btn-dark"><i class="fa fa-trash"></i></button></td>
         </tr>
         <tr>
@@ -57,7 +63,7 @@
           <td>United Kingdom</td>
           <td>GBP</td>
           <td>USD</td>
-          <td><button type="button" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
+          <td><button type="button" class="btn btn-info edit"><i class="fa fa-edit"></i></button></td>
           <td><button type="button" class="btn btn-dark"><i class="fa fa-trash"></i></button></td>
         </tr>
         <tr>
@@ -67,7 +73,7 @@
           <td>America</td>
           <td>USA</td>
           <td>USD</td>
-          <td><button type="button" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
+          <td><button type="button" class="btn btn-info edit"><i class="fa fa-edit"></i></button></td>
           <td><button type="button" class="btn btn-dark"><i class="fa fa-trash"></i></button></td>
         </tr>
         <tr>
@@ -77,11 +83,34 @@
           <td>United Kingdom</td>
           <td>GBP</td>
           <td>USD</td>
-          <td><button type="button" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
+          <td><button type="button" class="btn btn-info edit"><i class="fa fa-edit"></i></button></td>
           <td><button type="button" class="btn btn-dark"><i class="fa fa-trash"></i></button></td>
         </tr>
 
       </tbody>
     </table>
   </div>
+  <!-- Modal -->
+<div class="modal fade" id="createEditCountryMdl" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLongTitle">Create/Edit Country Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
 </div>
