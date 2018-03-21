@@ -435,3 +435,7 @@ table.dataTable thead .sorting:after {
     border-left-width: 0;
   }
 }
+.collapse {
+    display: none;
+    visibility: visible;
+}

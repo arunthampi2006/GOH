@@ -5,7 +5,7 @@
  */
 $(function() {
     $('#side-menu').metisMenu();
-    
+
     $(document).on('click','.clp-arrow', function(event) {
       $(event.currentTarget).find('span.arrow').toggleClass('arrow-down');
     });
@@ -13,6 +13,7 @@ $(function() {
       event.preventDefault();
       $("#page-wrapper").load("country/country.html");
     });
+
 });
 
 //Loads the correct sidebar on window load,
